@@ -81,6 +81,7 @@ namespace RConUtility
             {
                 currentTime = 0f;
             }
+            State = ITicker.Action.Set;
         }
 
         public ITicker.Action Tick()
@@ -166,6 +167,12 @@ namespace RConUtility
 
             isActive = false;
             action = ITicker.Action.Finished;
+        }
+
+        public void Restart()
+        {
+            Reset();
+            Start();
         }
     }
 }

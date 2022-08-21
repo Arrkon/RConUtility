@@ -25,6 +25,7 @@ namespace RConUtility
         public void Pause();
         public void Reset();
         public void Start();
+        public void Restart();
         public Action Tick();
     }
 }

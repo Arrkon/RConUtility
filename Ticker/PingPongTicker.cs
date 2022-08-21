@@ -73,7 +73,7 @@ namespace RConUtility
         public void Start()
         {
             IsActive = true;
-            State = ITicker.Action.Set;
+            State = ITicker.Action.Counting;
         }
         #endregion
 
@@ -148,6 +148,13 @@ namespace RConUtility
             {
                 _currentTime = _counterTime;
             }
+            State = ITicker.Action.Set;
+        }
+
+        public void Restart()
+        {
+            Reset();
+            Start();
         }
         #endregion
     }
