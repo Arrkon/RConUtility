@@ -40,7 +40,7 @@ namespace Editor
             // replace macros
             file = file.Replace("#CREATIONDATE#", DateTime.Now + "");
             file = file.Replace("#PROJECTNAME#", PlayerSettings.productName);
-            file = file.Replace("#COMPANYNAME#", "RConApps");
+            file = file.Replace("#COMPANYNAME#", PlayerSettings.companyName);
             file = file.Replace("#DEFAULTNAMESPACE#", PlayerSettings.productName);
 
             //save
